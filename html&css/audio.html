@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>audio example</title>
+  <!-- 비동기 방식으로 처리하고자 할 때 헤드에 스크립트 둠 -->
+</head>
+
+<body>
+  <audio src="./media/trailer.mp4" autoplay controls>
+    your browser does not support the audio element.
+  </audio>
+
+  <!-- how to play video -->
+  <video id="video" src="./media/movie.ogv" muted autoplay controls>
+  </video>
+  <script type="text/javascript">
+    var video = document.getElementById("video");
+    video.muted = true;
+    video.play();
+
+    </script>
+</body>
+
+</html>

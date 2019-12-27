@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h3>회원가입 화면</h3>
+  <form action="#" method="post">
+    name : <input type="text" name="name" value=""><br>
+    address : <input type="text" name="address" value=""><br>
+    email : <input type="email" name="email" value=""><br>
+    gender : male <input type="radio" name="male" value=""> female <input type="radio" name="female" value=""><br><br>
+
+    <input type="submit" name="submit" value="send">
+    <input type="reset" value="reset">
+
+  </form>
+
+  <hr>
+  <video src="http://media.w3.org/2010/05/bunny/movie.ogv" width="300" height="200" autoplay poster="posterimage.jpg" autoplay controls></video>
+
+  <hr>
+  <iframe src="" name="iframe1" width="600" height="300"></iframe>
+  <p>
+    <a href="http://www.nate.com" target="iframe1">nate</a>
+  </p>
+
+  <hr>
+
+  <h3>html elements demo</h3>
+
+  <form action="#" method="post">
+    <ol>
+      <li>
+        name : <input type="text" name="name" value="" placeholder="name">
+      </li>
+      <li>
+        email : <input type="text" name="email" value="" placeholder="example@domain.com">
+      </li>
+      <li>
+        mobile : <input type="tel" name="mobile" value="" placeholder="01012341234">
+      </li>
+      <li>
+        website : <input type="url" name="website" value="">
+      </li>
+      <li>
+        score : <input type="number" name="score" value="">
+      </li>
+      <li>
+        range : <input type="range" name="range" value="">
+      </li>
+      <li>
+        message : <textarea name="message" rows="3" cols="40"></textarea>
+      </li>
+      <li>
+        <input type="submit" name="submit" value="send">
+      </li>
+    </ol>
+  </form>
+
+  <hr>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>delivery address</legend>
+      <ol>
+        <li>address : <textarea name="address" rows="3" cols="40"></textarea></li>
+        <li>post code : <input type="number" name="post_code" value=""></li>
+        <li>country : <input type="text" name="country" value=""></li>
+      </ol>
+    </fieldset>
+  </form>
+
+  <hr>
+
+  <form class="" action="index.html" method="post">
+    <fieldset>
+      <legend>card information</legend>
+      <ol>
+        <li>
+          <fieldset>
+            <legend>type</legend>
+            <ol>
+              <li><input type="radio" name="visa" value=""> VISA</li>
+              <li><input type="radio" name="AmEx" value=""> AmEx</li>
+              <li><input type="radio" name="MasterCard" value=""> MasterCard</li>
+            </ol>
+          </fieldset>
+        </li>
+        <li>card number : <input type="number" name="card_number" value=""></li>
+        <li>CRC number : <input type="number" name="CRC_number" value=""></li>
+        <li>owner name : <input type="text" name="owner_name" placeholder="name on card"></li>
+      </ol>
+    </fieldset>
+  </form>
+  <div style="border : 1px solid; padding : 10px">
+    <input type="submit" name="purchase" value="purchase">
+  </div>
+</body>
+
+</html>
