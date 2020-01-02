@@ -1,0 +1,43 @@
+p {
+  background-color: 'red'; // 충돌되는 것은 inline style이 우선
+  border : 1px solid #cacaca;  // 왜 적용 안 되지 ..
+  padding : 50px;
+  font-size : 2em;
+}
+
+body {
+  font-size: 18px;
+  background-attachment: fixed; // 배경 고정
+}
+
+div {
+  font-size: 50px;
+}
+
+a:link {
+  /* text-decoration: line-through; */
+}
+
+a:hover{
+    background-color: red;
+    border : 10px solid #00caac;
+}
+
+a:visited {
+  text-decoration: line-through; // 왜 적용 안 되지 ..
+}
+
+h3 {
+  font-family: 'Gothic A1', sans-serif;
+}
+
+p#block-align{
+  font-family: 'Gothic A1', sans-serif;
+  border : 3px dotted red;
+  width : 50%;
+  text-align: center;
+  padding : 20px 0px 20px 0px;
+  margin:  0px auto 0px auto;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap');

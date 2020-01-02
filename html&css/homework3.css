@@ -1,0 +1,20 @@
+h1, h2{
+  color : green;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+strong {
+  color : orange;
+  font-family: 'Inconsolata', monospace;
+  font-style: italic;
+  font-size: 15px;
+}
+
+li.li-tails {
+  color : red;
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Gothic+A1|Inconsolata&display=swap');

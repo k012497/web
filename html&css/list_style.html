@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- list를 inline요소로 바꾸면 수평 리스트 만들 수 있음 -->
+    <style>
+      ul {
+        border-top : 1px solid black;
+        border-bottom : 1px solid black;
+        text-align: center;
+        padding: 10px;
+      }
+
+      ul>li {
+        display: inline;
+        padding: 15px;
+      }
+
+      ul>li>a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+
+      ul>li>a:hover{
+        text-decoration: underline;
+        color: #cacaca;
+        font-size: 20px;
+      }
+
+      table, th, td {
+        margin: auto;
+        padding : 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      th {
+        background-color: #aac;
+      }
+
+      table {
+        width: 50%;
+      }
+
+      caption {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+  <ul>
+    <li><a href="#">home</a></li>
+    <li><a href="#">blog</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+
+  <table>
+    <caption>* customer list *</caption>
+    <tr>
+      <th>name</th>
+      <th>email</th>
+    </tr>
+    <tr>
+      <td>kim</td>
+      <td>kim@gamil.com</td>
+    </tr>
+    <tr>
+      <td>lee</td>
+      <td>lee@naver.com</td>
+    </tr>
+    <tr>
+      <td>park</td>
+      <td>park@hanmail.net</td>
+    </tr>
+  </table>
+  </body>
+</html>
