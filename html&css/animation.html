@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    #div-animation {
+      width : 100px;
+      height : 100px;
+      border-radius : 50px;
+      background-color : red;
+      position : relative;
+      animation : 2s myanim; /* 100%가 2초 */
+      animation-iteration-count : infinite;
+    }
+
+    @keyframes myanim {
+      0% { left : 0px; top : 0px; }
+      25% { left : 100px; top 0px; background-color : yellow; }
+      50% { left : 200px; top 0px; background-color : green; }
+      75% { left : 100px; top 0px; background-color : red; }
+      100% { left : 0px; top : 0px; background-color : gray; }
+    }
+
+    #div-animation-ball {
+      width : 20px;
+      height : 20px;
+      /* bottom : 0px; */
+      border-radius : 10px;
+      background-color : black;
+      position : relative;
+      animation : 5s bounce; /* 100%가 2초 */
+      animation-iteration-count : infinite;
+    }
+
+    @keyframes bounce {
+      0% { top : 0px; bottom : 0px; }
+      25% { top : 100px; bottom 100px; background-color : yellow; }
+      50% { top : 200px; bottom 200px; background-color : green; }
+      75% { top : 100px; bottom 100px; background-color : red; }
+      100% { top : 0px; bottom : 0px; background-color : gray; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="div-animation"></div>
+  <div id="div-animation-ball"></div>
+</body>
+
+</html>
