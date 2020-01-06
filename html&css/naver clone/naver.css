@@ -1,0 +1,211 @@
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: white;
+}
+
+nav {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+h3 {
+  margin: 0;
+}
+
+ul {
+  padding: 3px;
+  margin: 10px;
+}
+
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+.div-center {
+  width : 1100px;
+  margin : 0 auto;
+}
+
+#header-start {
+  text-align: right;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+#header-start a {
+  color : silver;
+  margin-right: 10px;
+}
+
+#header-start a:hover {
+  text-decoration: underline;
+  color : gray;
+}
+
+#header-start #junior-naver {
+  display: inline-block; /* block, inline-block 둘 다 가능  */
+  width: 58px;
+  height: 11px;
+  background-position: 0 -158px;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191212.png);
+  background-repeat: no-repeat;
+}
+
+#a-junior-naver:hover {
+  display: inline-block;
+  width: 58px;
+  height: 11px;
+  background-position: -68px -158px;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191212.png);
+  background-repeat: no-repeat;
+}
+
+#header-start #happy-bean {
+  display: inline-block;/* block, inline-block 둘 다 가능 */
+  width: 34px;
+  height: 11px;
+  background-position: -136px -158px;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191212.png);
+  background-repeat: no-repeat;
+}
+#header-start #a-junior-naver:hover, #a-happy-bean:hover {
+  text-decoration: none;
+}
+
+#header-search {
+  padding : 20px 30px;
+  position : relative;
+}
+
+#header-search #naver-logo {
+  display: inline-block;/* block, inline-block 둘 다 가능 */
+  width: 147px;
+  height: 55px;
+  background-position: -61px -20px;
+  background-image: url(https://ssl.pstatic.net/sstatic/search/nlogo/20200103134930.png);
+  background-repeat: no-repeat;
+}
+
+#header-search fieldset{
+  position : relative;
+  display: inline-block;
+  width : 520px;
+  height : 49px;
+  top : -21px;
+  left : 11px;
+  border : 2px solid #03cf5d;
+  padding-top: 9px;
+  box-sizing: border-box;
+}
+
+#header-search fieldset button {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 49px;
+  height: 49px;
+  margin-left: -2px;
+  padding: 0;
+  border: 0;
+  background-color: #03cf5d;
+  cursor: pointer;
+  background-position: 7px -116px;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg),none;
+  background-size: 261px 210px;
+}
+
+#search-submit {}
+
+#header-search input{
+  width: 389px;
+  height: 23px;
+  line-height: 23px;
+  font-weight: 700;
+  outline: 0;
+  border : 0;
+}
+
+#header-search #search-submit {
+  position : absolute;
+
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+  margin-right : 5px;
+}
+
+nav ul {
+  display: inline-block;
+}
+
+#keyword {
+  display: inline-block;
+}
+
+main {
+  background-color: #eee;
+  margin: 0;
+}
+
+.area-navigation #mail-icon, #cafe-icon, #blog-icon, #jisik-icon, #shopping-icon, #pay-icon, #tv-icon{
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav_v191128.png);
+  background-repeat: no-repeat;
+  background-color: white;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+#mail-icon {
+  width: 25px;
+  height: 16px;
+  background-position: -259px -259px;
+}
+
+#cafe-icon {
+  width: 27px;
+  height: 16px;
+  background-position: -37px -259px;
+}
+
+#blog-icon {
+  width: 40px;
+  height: 16px;
+  background-position: -182px -156px;
+}
+
+#jisik-icon {
+  width: 40px;
+    height: 16px;
+    background-position: -126px -130px;
+}
+
+#shopping-icon {
+  width: 26px;
+height: 16px;
+background-position: -294px 0;
+}
+
+#pay-icon {
+  width: 25px;
+      height: 16px;
+      background-position: -71px -285px;
+}
+
+#tv-icon {
+  margin-top: -1px;
+    width: 32px;
+    height: 16px;
+    background-position: -244px -208px;
+
+
+}
