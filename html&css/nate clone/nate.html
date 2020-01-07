@@ -45,7 +45,7 @@
       <div id="header-search">
         <fieldset>
           <legend class="blind">검색</legend>
-          <input type="text" name="" value="">
+          <input type="text" name="search" value="">
           <button type="button" name="button"></button>
         </fieldset>
         <ul>
@@ -78,12 +78,95 @@
         <li><a href="http://shopping.nate.com/#index">쇼핑</a></li>
         <li><a href="#">아이돌 24시</a></li>
         <li><a href="#">더보기</a></li>
-        <li><a href="#">실시간 검색</a></li>
+        <li><a href="#">
+          <div id="keyword">
+            <span>실시간 검색</span>
+          </div>
+        </a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- main -->
+  <main>
+    <div class="div-center">
+      <!-- top -->
+      <div id="main-top">
+        <div id="banner-top">
+          <img src="top-banner.jpg" alt="광고">
+        </div>
+        <div id="login">
+          <span class = "option-top">
+            <input type="checkbox" name="saveUser" value="">
+            <label for="saveUser">로그인 유지</label> |
+            <a href="#">IP보안<strong><u>ON</u></strong></a>
+          </span>
+          <fieldset>
+            <legend class="blind">로그인</legend>
+            <input id="input-login" type="text" name="id" placeholder="아이디 or @이하 모두 입력"><br>
+            <input id="input-login" type="text" name="password" placeholder="비밀번호">
+            <input id="btn-login" type="button" name="login" value="로그인">
+          </fieldset>
+          <span class = "option-bottom">
+            <a href="#">아이디/비밀번호 찾기</a> |
+            <a href="#"><strong>회원가입</strong></a>
+          </span>
+        </div>
+      </div>
 
+      <!-- middle -->
+      <div id="main-content">
+        <div class="left-side">
+          <div class="news-area">
+
+          </div>
+          <div class="today-info-area">
+
+          </div>
+          <div class="talk-area">
+            <div id="talk-choice">
+
+            </div>
+            <div id="today-talk">
+
+            </div>
+          </div>
+          <div class="theme-area">
+            <!-- 캡쳐 -->
+          </div>
+        </div>
+        <div class="right-side">
+          <div id="side-banner">
+            <img src="side-banner.png" alt="광고">
+          </div>
+          <div id="shopping"> <!-- 코드 위치 -->
+            <img src="shopping.png" alt="">
+          </div>
+          <div id="recommend-products"><!-- 코드 위치 -->
+
+          </div>
+          <div id="fun-fun">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom -->
+      <div id="main-bottom">
+        <div id="recommend-contents">
+        </div>
+
+        <div id="bottom-banner">
+          <div id="left-ad">
+            <img src="bottom-left-banner.jpg" alt="광고">
+          </div>
+          <div id="right-ad">
+            <img src="https://main.nateimg.co.kr/img/cms/content_pool/2019/12/1577412655766.jpg" alt="광고">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

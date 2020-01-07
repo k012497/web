@@ -15,25 +15,29 @@ li {
   list-style: none;
 }
 
+ul {
+  padding: 0;
+}
+
 .blind {
-  position: absolute!important;
-  top: -1000px!important;
-  left: -1000px!important;
-  width: 0!important;
-  height: 0!important;
-  font-size: 0!important;
-  line-height: 0!important;
-  text-indent: -1000em!important;
-  overflow: hidden!important;
+  position: absolute !important;
+  top: -1000px !important;
+  left: -1000px !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: -1000em !important;
+  overflow: hidden !important;
 }
 
 .div-center {
-  width : 880px;
-  margin : 0 auto;
+  width: 880px;
+  margin: 0 auto;
 }
 
 .divider {
-  color : lightgray;
+  color: lightgray;
 }
 
 header {
@@ -41,10 +45,10 @@ header {
 }
 
 #header-top, #header-top a {
-  height : 26px;
+  height: 26px;
   text-align: right;
   font-size: 11px;
-  color : gray;
+  color: gray;
   letter-spacing: -1px;
 }
 
@@ -70,11 +74,18 @@ header {
 }
 
 #header-logo, #header-search {
-  display : inline-block;
+  display: inline-block;
 }
 
 #header-search {
   margin-top: 25px;
+}
+
+#header-search ul {
+  width: 424px;
+  height: 15px;
+  padding: 5px;
+  vertical-align: top;
 }
 
 #header-search legend, #header-search input {
@@ -82,7 +93,7 @@ header {
 }
 
 #header-search fieldset {
-  border : 1px solid #f01917;
+  border: 1px solid #f01917;
   padding-left: 0px;
   padding-top: 0px;
   padding-right: 0px;
@@ -92,6 +103,7 @@ header {
 #header-search input {
   width: 342px;
   height: 22px;
+  margin: 10px 0 0 10px;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -1px;
@@ -112,22 +124,138 @@ header {
   margin-top: 3px;
 }
 
-#header-search a{
+#header-search a {
   font-size: 12px;
-  color : #555; /* 오 ㅐ 안 나와?????????? */
+  color: #555;
+  /* 오 ㅐ 안 나와?????????? */
   margin-top: 3px;
 }
 
-nav {
+nav .div-center {
   border-bottom: 3px solid #E52E02;
 }
 
 nav li {
-  margin-right: 20px;
-  color : #555;
+  margin-right: 15px;
+  color: #555;
   font-weight: bold;
 }
 
-nav ul{
+nav ul {
+  padding: 0;
   margin: 10px auto;
+}
+
+nav #keyword {
+  display: inline-block;
+  width: 189px;
+}
+
+.left-side {
+  display: inline-block;
+  width: 595px;
+  height: 1488px;
+}
+
+.right-side{
+  display: inline-block;
+  width: 280px;
+  height: 1488px;
+}
+
+#banner-top {
+  float: left;
+  width: 595px;
+  height: 100px;
+}
+
+#login {
+  float: right;
+  width: 280px;
+  height: 100px;
+  font-size: 10px;
+  background: #fbfbfb;
+}
+
+/* #login span {
+  height : 100px;
+} */
+
+#login fieldset{
+  box-sizing: border-box;
+  text-align: center;
+  border: 0;
+}
+
+#login #input-login{
+  float: left;
+  width: 180px;
+  height: 23px;
+}
+
+#btn-login {
+  float: left;
+  right: 0px;
+  width: 63px;
+  height: 45px;
+}
+
+.news-area {
+  float: left;
+  width: 576px;
+  height: 297px;
+}
+
+#side-banner {
+  float: right;
+  width: 280px;
+  height: 191px;
+}
+
+.today-info-area {
+  float: left;
+  width: 576px;
+  height: 128px;
+}
+
+#shopping {
+  float: right;
+  width: 280px;
+}
+
+.talk-area {
+  float: left;
+  width: 576px;
+  height: 297px;
+}
+
+.theme-area {
+  float: left;
+  width: 576px;
+  height: 686px;
+}
+
+#recommend-products {
+  float: right;
+  width: 280px;
+  height: 215px;
+}
+
+#fun-fun {
+  float: right;
+  width: 280px;
+  height: 376px;
+}
+
+#recommend-contents {
+  width: 880px;
+  height: 94px;
+}
+
+#left-ad {
+  float: left;
+}
+
+#right-ad {
+  float: right;
 }
