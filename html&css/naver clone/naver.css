@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  user-select: none;
+}
+
 a {
   text-decoration: none;
+  color : black;
 }
 
 header {
@@ -30,7 +38,7 @@ ul {
 }
 
 .div-center {
-  width : 1100px;
+  width : 1080px;
   margin : 0 auto;
 }
 
@@ -59,13 +67,8 @@ ul {
   background-repeat: no-repeat;
 }
 
-#a-junior-naver:hover {
-  display: inline-block;
-  width: 58px;
-  height: 11px;
+#header-start #junior-naver:hover {
   background-position: -68px -158px;
-  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191212.png);
-  background-repeat: no-repeat;
 }
 
 #header-start #happy-bean {
@@ -76,6 +79,11 @@ ul {
   background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191212.png);
   background-repeat: no-repeat;
 }
+
+#header-start #happy-bean:hover {
+  background-position: 0px -199px;
+}
+
 #header-start #a-junior-naver:hover, #a-happy-bean:hover {
   text-decoration: none;
 }
@@ -153,7 +161,10 @@ nav ul {
 }
 
 main {
-  background-color: #eee;
+  display: inline-block;
+  width: 100%;
+  background-color: #f2f4f7;
+  padding: 8px 0;
   margin: 0;
 }
 
@@ -206,6 +217,220 @@ background-position: -294px 0;
     width: 32px;
     height: 16px;
     background-position: -244px -208px;
+}
 
+#ad-login-area {
+  display: inline-block;
+  width: 100%;
+}
 
+#ad-login-area div, #news-area div, #weather-area div, #theme-shopping div, #bottom-banner div {
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+#main-ad {
+  float: left;
+  width: 740px;
+  height: 120px;
+  background-color: white;
+  margin-right: 8px;
+}
+
+#main-login {
+  float: left;
+  width: 332px;
+  height: 120px;
+  background-color: white;
+  padding: 15px 25px;
+}
+
+.lg_local .lg_local_btn {
+  display: block;
+  margin-top: 12px;
+}
+
+.login-image {
+  width: 280px;
+  height: 37px;
+  display: inline-block;
+  background-position: 0 -47px;
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_login_v180727.png);
+  background-repeat: no-repeat;
+}
+
+.lg_local_text {
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#theme-shopping {
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+#news-weather {
+  padding : 0;
+}
+
+#news-headline {
+  width : 740px;
+  height: 46px;
+  line-height: 46px;
+  text-indent: 15px;
+  margin-bottom: 8px;
+}
+
+#news-stand {
+  width : 740px;
+  height: 246px;
+  padding: 0;
+}
+
+#news-stand #menu-list{
+  height : 45px;
+  border: 0;
+  line-height: 45px;
+  text-indent: 15px;
+}
+
+#news-stand ul {
+  padding: 0;
+  margin: 0;
+}
+
+#news-stand li{
+  width: calc(100% / 6);
+  height: 67px;
+  list-style: none;
+  float: left;
+  text-align: center;
+  border: 1px solid #f2f4f7;
+  box-sizing: border-box;
+}
+
+#news-stand img {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+#news-area {
+  float: left;
+  width: 740px;
+  height: 304px;
+  margin-top: 4px;
+  margin-right: 8px;
+}
+
+#weather-area {
+  float: left;
+  width: 332px;
+  height: 304px;
+  margin-top: 4px;
+}
+
+#weather {
+  width : 332px;
+  height : 142px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+
+#themecast-area {
+  display: inline-block;
+  width: 740px;
+  height: 884px;
+  background-color: white;
+  margin-right: 4px;
+}
+
+#shopping-area {
+  display: inline-block;
+  width: 332px;
+  height: 884px;
+  background-color: white;
+  margin-top: 4px;
+}
+
+#weather-area #banner {
+  height : 150px;
+  padding-bottom: 8px;
+  overflow: hidden;
+}
+
+#themecast-area{
+  margin-right: 4px;
+}
+
+footer {
+  clear: both;
+  border-top: 1px solid #e3e7ee;
+}
+
+footer .div-center {
+  height: 314px;
+}
+
+footer a {
+  color: gray;
+}
+
+#left-ad {
+  float: left;
+  width: 740px;
+  height: 130px;
+  margin-right: 8px;
+}
+
+#right-ad {
+  float: left;
+  width: 332px;
+  height: 130px;
+  overflow: hidden;
+}
+
+#footer-block {
+  background-color: white;
+  font-size: 13px;
+}
+
+#footer-notice {
+  width: 1080px;
+  height: 45px;
+  border-bottom: 1px solid #eee;
+  display: table-cell;
+  line-height: 45px;
+  text-indent: 15px;
+}
+
+#footer-aside {
+  width: 1080px;
+  height: 110px;
+  padding : 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+#footer-terms {
+  width: 1080px;
+  height: 45px;
+}
+
+#footer-aside h3 {
+  display: inline-block;
+  width: 91px;
+  height: 15px;
+}
+
+#footer-aside div {
+  padding : 5px;
+}
+
+#footer-terms li, #footer-aside li, #footer-aside ul{
+  margin-right: 5px;
+  list-style: none;
+  display: inline;
 }
