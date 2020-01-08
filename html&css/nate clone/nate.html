@@ -14,26 +14,21 @@
     <div class="div-center">
       <div id="header-top">
         <ul>
-          <li></li>
+          <li><a href="#">
+              <span>네이트를 시작페이지로</span></a>
+            <span class="divider"> | </span></li>
+          <li><img src="https://main2.nateimg.co.kr/img/v6/nate.png" alt="네이트앱">
+            <a href="#"><span>네이트앱</span></a>
+            <span class="divider"> | </span></li>
+          <li><img src="https://main2.nateimg.co.kr/img/v6/nateon_n_160425.png" alt="네이트온">
+            <a href="#"><span>네이트온</span></a>
+            <span class="divider"> | </span></li>
+          <li><img src="https://main2.nateimg.co.kr/img/cms/content_pool/2017/08/1503896074242.png" alt="싸이메라">
+            <a href="#"><span>싸이메라</span></a>
+            <span class="divider"> | </span></li>
+          <li><img src="https://main2.nateimg.co.kr/img/v6/ico_oditto.png" alt="어디가지또">
+            <a href="#"><span>어디가지또</span></a></li>
         </ul>
-        <a href="#">
-          <span>네이트를 시작페이지로</span></a>
-        <span class="divider"> | </span>
-
-        <img src="https://main2.nateimg.co.kr/img/v6/nate.png" alt="네이트앱">
-        <a href="#"><span>네이트앱</span></a>
-        <span class="divider"> | </span>
-
-        <img src="https://main2.nateimg.co.kr/img/v6/nateon_n_160425.png" alt="네이트온">
-        <a href="#"><span>네이트온</span></a>
-        <span class="divider"> | </span>
-
-        <img src="https://main2.nateimg.co.kr/img/cms/content_pool/2017/08/1503896074242.png" alt="싸이메라">
-        <a href="#"><span>싸이메라</span></a>
-        <span class="divider"> | </span>
-
-        <img src="https://main2.nateimg.co.kr/img/v6/ico_oditto.png" alt="어디가지또">
-        <a href="#"><span>어디가지또</span></a>
       </div>
 
       <div id="header-logo">
@@ -76,13 +71,30 @@
         <li><a href="http://auto.nate.com/#index">자동차</a></li>
         <li><a href="http://itpick.nate.com/#index">잇픽</a></li>
         <li><a href="http://shopping.nate.com/#index">쇼핑</a></li>
+        <span class="divider"> | </span>
         <li><a href="#">아이돌 24시</a></li>
-        <li><a href="#">더보기</a></li>
+        <span class="divider"> | </span>
+        <li><a href="#">더보기 ▾</a></li>
         <li><a href="#">
-          <div id="keyword">
-            <span>실시간 검색</span>
-          </div>
-        </a></li>
+            <div id="keyword">
+              <span>실시간 검색어</span>
+              <div id="keyword-list">
+                <ul>
+                  <span class="title">실시간 검색어</span>
+                  <li><a href="#"><span>1</span><span>레츠코레일</span><span class="increasement">71⬆</span></a></li>
+                  <li><a href="#"><span>2</span><span>이명박</span><span class="increasement">161⬆</span></a></li>
+                  <li><a href="#"><span>3</span><span>윰댕</span><span class="increasement">153⬆</span></a></li>
+                  <li><a href="#"><span>4</span><span>미국 이란</span><span class="increasement">80⬆</span></a></li>
+                  <li><a href="#"><span>5</span><span>해치지 않아</span><span class="increasement">71⬆</span></a></li>
+                  <li><a href="#"><span>6</span><span>검찰 인사</span><span class="increasement">67⬆</span></a></li>
+                  <li><a href="#"><span>7</span><span>우크라이나</span><span class="increasement">46⬆</span></a></li>
+                  <li><a href="#"><span>8</span><span>김은희</span><span class="increasement">43⬆</span></a></li>
+                  <li><a href="#"><span>9</span><span>이용섭</span><span class="increasement">71⬆</span></a></li>
+                  <li><a href="#"><span>10</span><span>전여빈</span><span class="increasement">71⬆</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </a></li>
       </ul>
     </div>
   </nav>
@@ -96,21 +108,21 @@
           <img src="top-banner.jpg" alt="광고">
         </div>
         <div id="login">
-          <span class = "option-top">
+          <div class="option-top">
             <input type="checkbox" name="saveUser" value="">
             <label for="saveUser">로그인 유지</label> |
-            <a href="#">IP보안<strong><u>ON</u></strong></a>
-          </span>
+            <a href="#">IP보안 <strong><u>ON</u></strong></a>
+          </div>
           <fieldset>
             <legend class="blind">로그인</legend>
-            <input id="input-login" type="text" name="id" placeholder="아이디 or @이하 모두 입력"><br>
-            <input id="input-login" type="text" name="password" placeholder="비밀번호">
+            <input class="input-login" type="text" name="id" placeholder="아이디 or @이하 모두 입력"><br>
+            <input class="input-login" type="text" name="password" placeholder="비밀번호">
             <input id="btn-login" type="button" name="login" value="로그인">
           </fieldset>
-          <span class = "option-bottom">
+          <div class="option-bottom">
             <a href="#">아이디/비밀번호 찾기</a> |
             <a href="#"><strong>회원가입</strong></a>
-          </span>
+          </div>
         </div>
       </div>
 
@@ -118,42 +130,440 @@
       <div id="main-content">
         <div class="left-side">
           <div class="news-area">
-
+            <div id="news-tab">
+              <a class="layout-title" href="#">뉴스</a>
+              <a class="layout-title" href="#">스포츠</a>
+              <a class="layout-title" href="#">연예</a>
+              <a class="layout-title" href="#">랭킹뉴스</a>
+            </div>
+            <div class="news-top">
+              <img src="https://news.nateimg.co.kr/etc/cms/2020/01/08/1578436143_878.jpg" alt="">
+              <ul>
+                <li>한국당 "정세균 동탄개발 사례금 의혹"…丁 "이런 모욕 처음"</li>
+                <li>'갭투자' 잡는다…고가주택 사면 전세대출 회수 <span class="divider">|</span> MB 항소심 오늘 마무리</li>
+                <li>268조 원 쓰고도 '0명대 출산율'<span class="divider">|</span>헌재 "'최저임금 인상' 위헌 아냐"</li>
+                <li>톱랭커 고진영, 스폰서 없는 모자 쓸 판<span class="divider">|</span>국대급 레알 상무, 톱4 가능?</li>
+              </ul>
+            </div>
+            <div class="news-bottom">
+              <img src="https://news.nateimg.co.kr/etc/cms/2020/01/08/1578438863_402.jpg" alt="">
+              <ul>
+                <li>한국당 "정세균 동탄개발 사례금 의혹"…丁 "이런 모욕 처음"</li>
+                <li>'갭투자' 잡는다…고가주택 사면 전세대출 회수 <span class="divider">|</span> MB 항소심 오늘 마무리</li>
+                <li>268조 원 쓰고도 '0명대 출산율'<span class="divider">|</span>헌재 "'최저임금 인상' 위헌 아냐"</li>
+                <li>톱랭커 고진영, 스폰서 없는 모자 쓸 판<span class="divider">|</span>국대급 레알 상무, 톱4 가능?</li>
+              </ul>
+            </div>
+            <div class="recommend-service">
+              <dt>추천 서비스</dt>
+              <dd><a href="http://news.nate.com/comment?mid=n1500">투데이베플</a> <i>|</i>
+                <a href="http://news.nate.com/ent/idol24">아이돌24시</a> <i>|</i>
+                <a href="http://news.nate.com/hissue/clstList?mid=e0103&amp;isq=7376">드라마 모아보기</a> <i>|</i>
+                <a href="http://news.nate.com/hissue/clstList?mid=e0103&amp;isq=7377">예능 모아보기</a></dd>
+              <div class="news-option">
+                <span> 1 / 6</span>
+                <button id="btn_pause" type="button" name="btn_pause"></button>
+                <button id="btn_prev" type="button" name="btn_prev"></button>
+                <button id="btn_next" type="button" name="btn_next"></button>
+              </div>
+            </div>
           </div>
           <div class="today-info-area">
-
-          </div>
-          <div class="talk-area">
-            <div id="talk-choice">
+            <div id="weather-info">
+              <h4 class="blind">날씨</h4>
+              <div class="date">2020.01.08</div><span class="divider">|</span><div class="date">서울</div>
+              <div id="weather-details">
+                <a href="#">
+                  <span id="degree-number">5</span><span id="degree-unit">℃</span>
+                  <img src="http://main2.nateimg.co.kr/img/v6/weather3/35x35_am_10.png" width="35" height="35" alt="약한이슬비">
+                  <span id="min-max-degree">3°/5°</span>
+                  <div class="yesterday">
+                    <span>어제보다</span>
+                    <span id="yesterday-value">-9℃</span>
+                  </div>
+                </a>
+                <div class="finedust">
+                  <span>미세먼지</span>
+                  <span id="finedust-value">좋음</span>
+                </div>
+              </div>
+            </div>
+            <div id="today-info">
+              <h4 class="blind">운세, 부동산, 증시</h4>
+              <ul>
+                <li>
+                  <span>운세</span>
+                  <a href="#">별자리 운세</a>
+                  <a href="#">띠별 운세</a>
+                </li>
+                <li>
+                  <span>부동산</span>
+                  <a href="#">매물 시세</a>
+                  <a href="#">분양</a>
+                </li>
+                <li id="security-market">
+                  <span>증시</span>
+                  <a href="#">시장정보</a>
+                  <a href="#">종목 게시판</a>
+                </li>
+              </ul>
+            </div>
+            <div id="today-post-left" class="today-post">
+              <a href="#">
+                <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578379515637.jpg">
+                <span>시즌 1에 서현진<br>넘어설 수 있을까?</span>
+              </a>
 
             </div>
-            <div id="today-talk">
+            <div id="today-post-right" class="today-post">
+              <a href="#">
+                <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578379542219.jpg">
+                <span>부산 어묵? 오뎅?<br>일본도 탐내는 맛</span>
+              </a>
+            </div>
+          </div>
+          <div class="talk-area">
+            <div id="talk-menu">
+              <a class="talker-choice layout-title" href="#">톡커들의 선택</a>
+              <a class="today-talk layout-title" href="#">오늘의 톡</a>
+            </div>
 
+            <div class="talker-choice">
+              <ul>
+                <li>
+                  <span class="rank">1</span>
+                  <span class="title">+) 강아지 밖에서 비 맞고 떨고 있길래</span>
+                  <span class="comments">(114)</span>
+                </li>
+                <li>
+                  <span class="rank">2</span>
+                  <span class="title">우리 대학생활 짤 풀자ㅋㅋㅋㅋㅋ</span>
+                  <span class="comments">(128)</span>
+                </li>
+                <li>
+                  <span class="rank">3</span>
+                  <span class="title">제 생일을 왜 시댁이랑 보내야 할까요?</span>
+                  <span class="comments">(102)</span>
+                </li>
+                <li>
+                  <span class="rank">4</span>
+                  <span class="title">나 07인데</span>
+                  <span class="comments">(116)</span>
+                </li>
+                <li>
+                  <span class="rank">5</span>
+                  <span class="title">엑소 보컬 다 느낌이 다르네</span>
+                  <span class="comments">(131)</span>
+                </li>
+                <li>
+                  <span class="rank">6</span>
+                  <span class="title">헐얘들아 윰댕이거봄?개충격</span>
+                  <span class="comments">(477)</span>
+                </li>
+                <li>
+                  <span class="rank">7</span>
+                  <span class="title">오늘 바이브측 기자회견 요약 txt</span>
+                  <span class="comments">(321)</span>
+                </li>
+                <li>
+                  <span class="rank">8</span>
+                  <span class="title">어려운 동생을 돕겠다니 이혼하잡니다</span>
+                  <span class="comments">(180)</span>
+                </li>
+                <li>
+                  <span class="rank">9</span>
+                  <span class="title">그룹별 아기 시절 ㅋㅋㅋㅋㅋ</span>
+                  <span class="comments">(227)</span>
+                </li>
+                <li>
+                  <span class="rank">10</span>
+                  <span class="title">셒구 정규 이번에 대박날 듯</span>
+                  <span class="comments">(111)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="today-talk">
+              <ul>
+                <li>
+                  <span class="title">상남자 개두식을 소개합니다</span>
+                  <span class="comments">(114)</span>
+                </li>
+                <li>
+                  <span class="title">우리 대학생활 짤 풀자ㅋㅋㅋㅋㅋ</span>
+                  <span class="comments">(128)</span>
+                </li>
+                <li>
+                  <span class="title">제 생일을 왜 시댁이랑 보내야 할까요?</span>
+                  <span class="comments">(102)</span>
+                </li>
+                <li>
+                  <span class="title">나 07인데</span>
+                  <span class="comments">(116)</span>
+                </li>
+                <li>
+                  <span class="title">엑소 보컬 다 느낌이 다르네</span>
+                  <span class="comments">(131)</span>
+                </li>
+                <li>
+                  <span class="title">헐얘들아 윰댕이거봄?개충격</span>
+                  <span class="comments">(477)</span>
+                </li>
+                <li>
+                  <span class="title">오늘 바이브측 기자회견 요약 txt</span>
+                  <span class="comments">(321)</span>
+                </li>
+                <li>
+                  <span class="title">어려운 동생을 돕겠다니 이혼하잡니다</span>
+                  <span class="comments">(180)</span>
+                </li>
+                <li>
+                  <span class="title">그룹별 아기 시절 ㅋㅋㅋㅋㅋ</span>
+                  <span class="comments">(227)</span>
+                </li>
+                <li>
+                  <span class="title">셒구 정규 이번에 대박날 듯</span>
+                  <span class="comments">(111)</span>
+                </li>
+              </ul>
+              <div class="recommend-service">
+                <dt>추천 서비스</dt>
+                <dd><a href="#">톡톡</a> <i>|</i>
+                  <a href="#">팬톡</a> <i>|</i>
+                  <a href="#">판포토</a> <i>|</i>
+                  <a href="#">엔터톡</a></dd>
+                <div class="talk-option">
+                  <span>1 / 2</span>
+                  <button id="btn_pause" type="button" name="btn_pause"></button>
+                  <button id="btn_prev" type="button" name="btn_prev"></button>
+                  <button id="btn_next" type="button" name="btn_next"></button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="theme-area">
-            <!-- 캡쳐 -->
+            <div id="theme-list">
+              <ul id="theme-list-top">
+                <li><a class="layout-title" href="#">여행 / 맛집</a></li>
+                <li><a class="layout-title" href="#">뷰티</a></li>
+                <li><a class="layout-title" href="#">푸드</a></li>
+                <li><a class="layout-title" href="#">스타</a></li>
+                <li><a class="layout-title" href="#">패션</a></li>
+                <li><a class="layout-title" href="#">라이프</a></li>
+              </ul>
+              <div id="theme-list-bottom">
+                <ul>
+                  <li><a href="#">매워도 꿀맛</a></li>
+                  <li><a href="#">세트 음식</a></li>
+                  <li><a href="#">겨울 숙소</a></li>
+                  <li><a href="#">완뽕 부르는 맛</a></li>
+                  <li><a href="#">동네 맛집</a></li>
+                  <li><a href="#">푸짐한 상차림</a></li>
+                  <li><a href="#">체인점 탐방</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="theme-grid">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578285128893.jpg" width="129" height="96" alt="">
+                    <span>겨울철 온기를<br>더해줄 제품 모음</span>
+                    <div id="content-cite">
+                      <span class="content-theme">라이프</span>
+                      <span>마리끌레르</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="right-side">
           <div id="side-banner">
             <img src="side-banner.png" alt="광고">
           </div>
-          <div id="shopping"> <!-- 코드 위치 -->
+          <div id="shopping">
             <img src="shopping.png" alt="">
           </div>
-          <div id="recommend-products"><!-- 코드 위치 -->
-
+          <div id="recommend-products">
+            <img src="recommend-product.png" alt="">
           </div>
           <div id="fun-fun">
-
+            <div class="layout-title">Fun & Fun해</div>
+            <div id="fun-list">
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578381641278.jpg" alt="">
+                    <span>운세/신년운세<br>2020 명품신년운세</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578381641278.jpg" alt="">
+                    <span>운세/신년운세<br>2020 명품신년운세</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578381641278.jpg" alt="">
+                    <span>운세/신년운세<br>2020 명품신년운세</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578381641278.jpg" alt="">
+                    <span>운세/신년운세<br>2020 명품신년운세</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- bottom -->
       <div id="main-bottom">
+        <span class="layout-title" id="recommend-title">당신이 놓친 추천 콘텐츠</span>
         <div id="recommend-contents">
+          <div class="contents">
+            <a href="#">
+              <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578290088109.jpg" width="94" height="70" alt="늘 여자친구에게 주로 차인 이유?">
+              <span>늘 여자친구에게 주로 차인 이유?</span>
+              <span class="category">스타</span>
+            </a>
+          </div>
+          <div class="contents">
+            <a href="#">
+              <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578290139957.jpg" width="94" height="70" alt="팬 사랑 클래스가 정말 엄청나다고?">
+              <span>팬 사랑 클래스가 정말 엄청나다고?</span>
+              <span class="category">스타</span>
+            </a>
+          </div>
+          <div class="contents">
+            <a href="#">
+              <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578290088109.jpg" width="94" height="70" alt="늘 여자친구에게 주로 차인 이유?">
+              <span>늘 여자친구에게 주로 차인 이유?</span>
+              <span class="category">스타</span>
+            </a>
+          </div>
+          <div class="contents">
+            <a href="#">
+              <img src="http://main.nateimg.co.kr/img/cms/content_pool/2020/01/1578290139957.jpg" width="94" height="70" alt="팬 사랑 클래스가 정말 엄청나다고?">
+              <span>팬 사랑 클래스가 정말 엄청나다고?</span>
+              <span class="category">스타</span>
+            </a>
+          </div>
         </div>
 
         <div id="bottom-banner">
@@ -167,6 +577,28 @@
       </div>
     </div>
   </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="div-center">
+      <div id="div-notice">
+        <a class="title" href="#"><strong>공지사항</strong></a>
+        <a href="#">잇픽 서비스 종료 안내</a>
+        <a id="show-all" href="#">서비스 전체보기 ‣</a>
+      </div>
+      <div id="div-terms">
+        <ul>
+          <li><a href="#">회사소개</a></li><span class="divider"> | </span>
+          <li><a href="#">광고문의</a></li><span class="divider"> | </span>
+          <li><a href="#">서비스 약관</a></li><span class="divider"> | </span>
+          <li><a href="#">개인정보처리방침</a></li><span class="divider"> | </span>
+          <li><a href="#">청소년보호정책</a></li><span class="divider"> | </span>
+          <li><a href="#">고객센터</a></li><span class="divider"> | </span>
+          <li><a href="#">© SK Communications.</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
