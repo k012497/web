@@ -156,8 +156,51 @@ nav ul {
   display: inline-block;
 }
 
-#keyword {
+nav {
+  position: relative;
+}
+
+nav #div-keyword {
+  position: relative;
   display: inline-block;
+  float: right;
+  width: 332px;
+}
+
+nav #keyword {
+  display: inline-block;
+  float: right;
+  width: 332px;
+  line-height: 50px;
+  text-align: center;
+}
+
+nav #div-keyword li {
+  text-align: left;
+  display: block;
+  margin: 0;
+  height : 29.4px;
+}
+
+nav #div-keyword li span {
+  margin-right: 15px;
+}
+
+nav #keyword-list {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  padding: 20px 15px;
+  top: 0px;
+  width: 332px;
+  height: 334px;
+  margin: 0;
+}
+
+nav #div-keyword:hover #keyword-list{
+  display: block;
 }
 
 main {
