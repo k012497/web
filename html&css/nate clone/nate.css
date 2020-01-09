@@ -217,6 +217,11 @@ main {
   padding-top: 4px;
 }
 
+#main-top, #main-content, #main-bottom {
+  display: inline-block;
+  width: 880px;
+}
+
 .left-side {
   display: inline-block;
   float: left;
@@ -290,7 +295,7 @@ main {
    text-indent: 15px;
    color : #555;
    margin-bottom: 2px;
- }
+}
 
 .news-area {
   float: left;
