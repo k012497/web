@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
@@ -184,7 +188,6 @@ nav #keyword-list .title {
   height: 280px;
   border: 1px solid #ddd;
   background-color: white;
-  box-sizing: border-box;
   text-align: left;
   padding : 10px;
   font-weight: normal;
@@ -241,13 +244,11 @@ main {
   font-size: 10px;
   background: #fbfbfb;
   border: 1px solid #ddd;
-  box-sizing: border-box;
   padding-top: 10px;
 }
 
 #login fieldset{
   position: relative;
-  box-sizing: border-box;
   text-align: center;
   border: 0;
   padding: 0;
@@ -261,7 +262,6 @@ main {
   height: 23px;
   padding: 0;
   border: 1px solid #ddd;
-  box-sizing: border-box;
 }
 
 #login fieldset:nth-child(2) input {
@@ -272,7 +272,6 @@ main {
 #btn-login {
   position: absolute;
   top: 0;
-  /* display: inline-block; */
   float: right;
   right: 0px;
   width: 63px;
@@ -403,7 +402,6 @@ main {
 
 #weather-info {
   padding: 8px 0 8px 15px;
-  box-sizing: border-box;
 }
 
 #weather-info .date {
@@ -461,7 +459,6 @@ main {
 
 #today-info {
   padding: 12px;
-  box-sizing: border-box;
   left : 149px;
   text-align: center;
   color : #222;
@@ -549,7 +546,6 @@ main {
   width: 576px;
   height: 20px;
   margin-top: 20px;
-  box-sizing: border-box;
 }
 
 .talk-area .recommend-service{
@@ -607,12 +603,12 @@ a.talker-choice {
   width: 576px;
   height: 103px;
   border: 1px solid #eee;
+  box-sizing: content-box;
 }
 
 #theme-list-top {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 #theme-list-top li {
@@ -624,7 +620,6 @@ a.talker-choice {
   line-height: 53px;
   user-select: none;
   background-color: white;
-  box-sizing: border-box;
   border-left: 1px solid #eee;
 }
 
@@ -749,7 +744,6 @@ a.talker-choice {
   height: 70px;
   font-size: 12px;
   background-color: #f6f6fa;
-  box-sizing: border-box;
   border: 1px solid #ddd;
   margin-right: 15.66px;
 }
