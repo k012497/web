@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2020 01 13</title>
+</head>
+<body>
+    <script>
+        function underHundred(){
+            var number = prompt("스크립트 프롬프트", "100미만의 정수만 입력");
+            if(number > 100){
+                alert(number+"은(는) 100보다 크다!");
+            }
+        };
+
+        function sum(){
+            var sum = 0;
+            for(var i = 1 ; i <= 100 ; i++){
+                sum += i;
+            }
+            alert("1-100 합은" + sum);
+        };
+
+        var planetArray = ["수성", "금성", "지구", "화성", "목성", "토성", "천왕성", "해왕성"];
+        function alertPlanet(){
+            for(var j = 0 ; j < planetArray.length ; j++){
+                alert(planetArray[j]);
+            }
+        };
+
+        function game(){
+            var reply = confirm("게임 한 판 하실?");
+            if(reply){
+                alert("좋아요!");
+            }else {
+                alert("아쉽네요!");
+            }
+        };
+
+        function Music(singer, duration, title){
+            this.singer = singer;
+            this.duration = duration;
+            this.title = title;
+        };
+        var favMusic = [new Music("Corinne Bailey Rae", "3:28", "put your records on"), new Music("SanE", "3:48", "LoveSick"), new Music("Beak", "4:28", "square")];
+        function favList(){
+            for(var k = 0 ; k < favMusic.length ; k++){
+                document.write(favMusic[k].singer + "-" + favMusic[k].title + "(" + favMusic[k].duration + ")<br>");
+            };
+        };
+
+        var table = document.createElement('table');
+        table.style.border = "1px solid gray";
+        var tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+        function gugudan(){
+            for(i = 1 ; i < 10 ; i++){
+                var tr = document.createElement('tr');
+                for(j = 1 ; j < 10 ; j++){
+                    var td = document.createElement('td');
+                    td.textContent = i + "*" + j + "=" + (i * j);
+                    tr.appendChild(td);
+                    td.style.border = "1px solid gray";   
+                }
+                tbody.appendChild(tr);
+            }
+            document.body.appendChild(table);
+        };
+
+        // // using document.write()
+        // function gugudan(){
+        //     document.write("<table border : 2>");
+        //     for(i = 2 ; i <= 9 ; i++){
+        //         document.write("<tr>");
+        //         for(j = 1 ; j <= 9 ; j++){
+        //             document.write("<td>" + i + "*" + j + "=" + (i * j) + "</td>");
+        //         }
+        //         document.write("</tr>");
+        //     }
+        //     document.write("</table>");
+        // }
+
+    </script>
+
+    <button id = "ex10" type = "button" onclick="underHundred();">ex10</button>
+    <button id = "ex11" type = "button" onclick="sum();">ex11</button>
+    <button id = "ex12" type = "button" onclick="alertPlanet();">ex12</button>
+    <button id = "ex13" type = "button" onclick="game();">ex13</button>
+    <button id = "ex14" type = "button" onclick="favList();">ex14</button>
+    <button id = "multiplication" type = "button" onclick="gugudan();">multiplication table</button>
+
+</body>
+</html>
