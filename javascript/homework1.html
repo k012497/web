@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.write("Hello World!" + "<hr>");
+    </script>
+</head>
+<body>
+    <button type="button" onclick="greeting();">click me</button>
+    <h1 id = "h1-test">색깔 바뀌나요</h1>
+    <button type="button" onclick="changeColor();">change color</button>
+    
+    <div>
+        <h2>숫자맞추기 게임</h2>
+        <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.</p>
+        <form action="#">
+            숫자 : <input id = "user-guess" type="number">
+            <input type="button" value="확인" onclick = "setResult();"><br />
+            추측횟수 : <input id = "count" type="number">
+            힌트 : <input id = "hint" type="text">
+        </form>
+    </div>
+
+    <script>
+        var now = new Date();
+        document.write(now);
+
+        var s;
+        s = 100;
+        document.write(s + "<hr>");
+
+        s = '홍길동';
+        document.write(s + "<hr>");
+
+        var s = "Hello World";
+        var t = "How are you" + " today?";
+
+        document.write(s + "<br>");
+        document.write(t + "<br>");
+        document.write(s.toUpperCase() + "<hr>");
+
+        var input;
+        var regExp = /^[0-9]+$/;
+        var x, y;
+
+        input = prompt("정수를 입력하세요", "정!!!수!!!");
+        x = parseInt(input);
+        input = prompt("정수를 입력하세요", "정!!!수!!!");
+        y = parseInt(input);
+        if(regExp.test(x) && regExp.test(y)){
+            document.write("더한 결과 : " + (x + y) + "<hr>");
+        }else{
+            alert("정수만 쓰랬지");
+        }
+        
+        function changeColor(){
+            var h1 = document.getElementById("h1-test");
+            h1.style.color = 'red';
+        }
+
+        function greeting() {
+            var time = new Date().getHours;
+            if (time < 12) {
+                greeting = "Good Morning!";
+            }else if(time < 18){
+                greeting = "Good Afternoon!";
+            }else{
+                greeting = "Good Evening!";
+            }
+            alert(greeting);
+        }
+        
+        var answer = Math.ceil(Math.random() * 100);
+        var countNum = 0;
+        var hint;
+        var result;
+        var count;
+
+        function initSetting(){
+            hint = document.getElementById("hint");
+            count = document.getElementById("count");
+            console.log(answer);
+        }
+
+        function setResult(){
+            initSetting();
+            var userGuess = document.getElementById("user-guess").value;
+            countNum++;
+            count.textContent = countNum;
+            if(userGuess > answer){
+                hint.value = "다운";
+            }else if (userGuess < answer){
+                hint.value = "업";
+            }else {
+                hint.value = "정답쓰";
+            }
+            count.value = countNum;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>20 01 10</title>
+</head>
+
+<body>
+  <form action="#" method="post">
+    num1 : <input id="num1" type="number" placeholder="0" /><br />
+    num2 : <input id="num2" type="number" placeholder="0" /><br />
+    <input type="button" onclick="add();" value = "add" style="width: 150px;"><br />
+    sum : <input id="sum" type="number" placeholder="-" />
+  </form>
+  <script type="text/javascript">
+    function add(){
+      var num1 = document.getElementById("num1");
+      var num2 = document.getElementById("num2");
+      checkBlank(num1, num2);
+      var sum = document.getElementById("sum");
+      var result = parseInt(num1.value) + parseInt(num2.value);
+
+      document.getElementById("sum").value = result;
+    }
+
+    function checkBlank(input1, input2){
+      if(input1.value === "0" || input1.value === ""){
+        alert("정신차려!!!!!");
+        input1.focus();
+      }else if(input2.value === "0" || input2.value === ""){
+        alert("정신차려!!!!!");
+        input2.focus();
+      }
+    }
+
+  </script>
+</body>
+
+</html>
