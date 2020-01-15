@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <button onclick="myFunction()">open google</button>
+
+        <input type="button" value="make window" onclick="openWindow()">
+        <input type="button" value="move window" onclick="moveWindow()">
+        <a href="#" onclick="replace()"></a>
+
+        <script>
+            function myFunction() {
+                var myWindow = window.open(
+                    "http://www.google.com",
+                    "_blank",
+                    "width=500, height=500"
+                );
+            }
+
+            var w;
+            
+            function openWindow() {
+                w = window.open('', '', 'width = 200, height = 200');
+                w
+                    .document
+                    .write("<p>오늘의 세일 품목<p>");
+                w.moveTo(0, 0);
+            }
+
+            function moveWindow() {
+                w.moveTo(30, 30);
+                w.focus();
+            }
+
+            function replace(){
+              location.replace("http://www.google.com");
+            }
+
+        </script>
+
+    </body>
+</html>
