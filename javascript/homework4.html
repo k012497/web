@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20 01 15</title>
+    <script>
+        function process(){
+            var obj = document.myform.mytext;
+            alert(obj.value);
+        }
+
+        function changeImg(){
+            var img = document.getElementById("image");
+            img.src = "https://www.ambitiouskitchen.com/wp-content/uploads/2014/03/glutenfreecookies-6-725x725.jpg";
+        }
+
+        function hide(){
+            var heading = document.getElementById("heading");
+            heading.style.visibility = "hidden";
+        }
+
+        function show(){
+            var heading = document.getElementById("heading");
+            heading.style.visibility = "visible";
+        }
+
+        var id;
+        function changeColor(){
+            id = setInterval(flashText, 100);
+        }
+
+        function flashText(){
+            var element = document.getElementById("target-p395");
+            // var randomColor = element.style.color === "red" ? "green" : "blue";
+            var randomColor = "#" + parseInt(Math.random() * 1000000);
+            element.style.color = randomColor;
+        }
+
+        function stopChange(){
+            clearInterval(id);
+            // console.log("stopstop");
+        }
+
+        function changeBackgroundColor(color){
+            document.body.style.backgroundColor = color;
+            console.log(color);
+        }
+
+    </script>
+</head>
+<body onload="changeColor();">
+    <form name="myform">
+        <input type="text" name="mytext">
+        <input type="submit" value="submit" onclick="process();">
+        <hr>
+        <img id = "image" src="https://boygeniusreport.files.wordpress.com/2016/11/puppy-dog.jpg?quality=98&strip=all&w=782" width = "200" alt="dog">
+        <input type="button" value="change" onclick="changeImg();">
+        <hr>
+        <h3 id="heading">요소 사라져라</h3>
+        <input type="button" value="hide" onclick="hide();">
+        <input type="button" value="show" onclick="show();">
+        <hr>
+        <h4 id = "target-p395">text color</h4>
+        <button type="button" onclick="stopChange()">STOP!!!!</button>
+        <hr>
+        <form>
+            <input type="radio" name="radioButton" onclick="changeBackgroundColor('lightgreen')">green
+            <input type="radio" name="radioButton" onclick="changeBackgroundColor('lightblue')">blue
+        </form>
+
+    </form>
+</body>
+</html>
