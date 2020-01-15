@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20 01 14</title>
+</head>
+<body>
+    <button onclick="speedTest();">ex4</button>
+    <button onclick="caps('test');">ex5</button>
+    <button onclick="printMonth();">ex6</button>
+    <button onclick="movies();">ex7</button>
+    <button onclick="randomFruits();">ex8</button>
+    <button onclick="timer();">p349</button>
+    <button onclick="stringIndexOf();">p354</button>
+    <button onclick="stringMatch();">p355</button>
+    <button onclick="arraySort();">p364-1</button>
+    <button onclick="arraySort2();">p364-2</button>
+    <button onclick="arraySlice();">p365-1</button>
+    <button onclick="arraySlice2();">p365-2</button>
+    
+    <hr>
+    <div id = "result"></div>
+    <hr>
+
+    <form name="calculator">
+        입력 : <input name = "number" type="number"> <br/>
+        계산 결과 : <input name = "result" type="number"> <br/>
+        <input type="button" value = "sin" onclick="calc(1);">
+        <input type="button" value = "log" onclick="calc(2);">
+        <input type="button" value = "sqrt" onclick="calc(3);">
+        <input type="button" value = "abs" onclick="calc(4);">
+    </form>
+
+    <hr>
+    <!-- p347 -->
+    구입날짜 :  <input type="date" id = "pdate">
+    <button onclick="checkDate();">check</button>
+
+    <hr>
+    <!-- p352 -->
+    이름 : <input type="text" id = "id">
+    <button onclick="checkID();">check</button>
+    
+    <script>
+        var result = document.getElementById('result');
+
+        function speedTest(){
+            var sum = 0;
+            var start = new Date();
+            for(var i = 0 ; i <= 1000000 ; i++){
+                sum += i;
+            }
+            console.log(i);
+            var end = new Date();
+            result.textContent = (end - start) + "밀리초 걸렸음";
+            console.log(start);
+            console.log(end);
+            start = 0;
+            end = 0;
+        }
+
+        function caps(str){
+            var strCap =  str.replace(str[0], str[0].toUpperCase());
+            result.textContent = strCap;
+        }
+
+        function printMonth(){
+            var month = new Date().getMonth();
+            console.log(month);
+            switch(month){
+                case 0 : month = 'Jan'; break;
+                case 1 : month = 'Feb'; break;
+                case 2 : month = 'Mar'; break;
+                case 3 : month = 'Apr'; break;
+                case 4 : month = 'May'; break; 
+                case 5 : month = 'Jun'; break;
+                case 6 : month = 'Jul'; break;
+                case 7 : month = 'Aug'; break;
+                case 8 : month = 'Sep'; break;
+                case 9 : month = 'Oct'; break;
+                case 10 : month = 'Nov'; break;
+                case 11 : month = 'Dec'; break;
+            }
+            result.textContent = "It's " + month;
+        }
+
+        function movies(){
+            var movies = new Array("터미네이터", "트랜스포머");
+            movies.push("맨오브스틸");
+            movies[movies.length-2] = "스파이더맨";
+            alert(movies[movies.length-1]);
+            console.log(movies);
+        }
+
+        function randomFruits(){
+            var fruits = new Array("오렌지", "망고", "바나나", "키위", "수박");
+            alert(fruits[Math.floor(Math.random() * (fruits.length))]);
+        }
+
+        function calc(type) {
+            if ((typeof type) == "number") {
+                var input = document.calculator.number.value;
+                var result;
+                console.log(input);
+                
+                switch (type) {
+                    case 1:
+                        result = Math.sin((input * Math.PI) / 180.0);
+                        console.log(result);
+                        break;
+
+                    case 2:
+                        result = Math.log(input);
+                        break;
+
+                    case 3:
+                        result = Math.sqrt(input);
+                        break;
+
+                    case 4:
+                        result = Math.abs(input);
+                        break;
+                }
+                document.calculator.result.value = result;
+            }
+
+        }
+
+        function timer(){
+            var now = new Date();
+            var nextNewYear = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0);
+            var diff = (nextNewYear - now) / 1000; // 남은 기간을 초로 환산
+            
+            var secs = Math.floor(diff % 60); //초
+            var mins = Math.floor((diff / 60) % 60); //분
+            var hours = Math.floor((diff / (60 * 60)) % 24); //시간
+            var days = Math.floor((diff / (60 * 60 * 24))); //일
+
+            console.log(now, nextNewYear);
+            console.log(days, hours, mins, secs);
+
+            result.textContent = "올해가 " + days + "일 " + hours + "시간 " + mins + "분 " + secs + "초 남았습니다.";
+
+            setTimeout(() => timer(), 1000);
+        }
+
+        function checkDate(){
+            var s = document.getElementById("pdate").value;
+            var pdate = new Date(s);
+            var today = new Date();
+            var diff = today.getTime() - pdate.getTime();
+            var days = Math.floor(diff / ( 1000 * 60 * 60 * 24 ));
+            if(days > 30){
+                alert("교환 기간이 지났습니다.");
+            }else {
+                alert("교환 가능");
+            }
+        }
+
+        function checkID(){
+            var str = document.getElementById("id").value;
+            if( str.length < 6){
+                alert("아이디는 6글자 이상이어야 합니다.");
+            }else{
+                alert("okay");
+            }
+        }
+
+        function stringIndexOf(){
+            var str = "자바스크립트에 오신 것을 환영합니다.";
+            var index = str.indexOf("환영");
+            result.textContent = index + "번째";
+        }
+
+        function stringMatch(){
+            var str = 'Like father, like son.';
+            var resultStr = str.match(/like/ig);
+            result.textContent = resultStr;
+        }
+
+        function arraySort(){
+            var arr = [10, 8 , 2, 13, 4, 23, 200, 90];
+            arr.sort();
+            result.textContent = arr;
+        }
+
+        function arraySort2(){
+            var arr = [10, 8 , 2, 13, 4, 23, 200, 90];
+            arr.sort(function (a, b){return b - a});
+            result.textContent = arr;
+        }
+
+        function arraySlice(){
+            var numbers = [1,2,3,4,5,6,7,8,9,10];
+            var newArray = numbers.slice(5);
+            result.textContent = newArray;
+        }
+
+        function arraySlice2(){
+            var fruits = ["apple", "banana", "peach"];
+            var str = fruits.join(", ");
+            result.textContent = str;
+        }
+
+    </script>
+</body>
+</html>
