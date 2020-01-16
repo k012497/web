@@ -39,7 +39,7 @@ function start() {
     if (!result) {
         return;
     } else {
-
+        stop();
         startDrawing = setInterval(myCanvas, 15);
     }
 }
