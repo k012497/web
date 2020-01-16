@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="alert('hi');">click here</button>
+    <hr>
+    <h5 id="h5-target">요소 값 변경하기</h5>
+    <button onclick="changeH5();">click here</button>
+    <hr>
+    숫자 입력: <input id="input-ex7" type="text"> <button onclick="checkNumber()">check</button>
+    <hr>
+    <img id="img-ex8" src="http://download.seaicons.com/icons/paomedia/small-n-flat/1024/switch-off-icon.png" width="100" onclick="switchOnOff()" alt="on">
+    <hr>
+    <form>
+        전화번호(-없이 입력): <input type="text" id="phone" />
+        <input type="button" onclick="checkNumeric(document.getElementById('phone'))" value="확인"/>
+    </form>
+    <hr>
+    <form>
+        좋아하는 과일은 <select id="fruits" class="required">
+            <option value="0">선택하세요</option>
+            <option value="1">수박</option>
+            <option value="2">참외</option>
+            <option value="3">망고</option>
+            <option value="4">구아바</option>
+        </select>
+        <input type="button" onclick="checkSelection(document.getElementById('fruits'))" value="입니다">
+    </form>
+    <hr>
+    <form>
+        <h3>회원가입</h3>
+        이름* : <input id="userName" type="text" onchange="checkName()"><span id="nameMsg"></span><br />
+        성별* : <input class="gender" name="gender" type="radio">male<input class="gender" name="gender" type="radio">female <span id="genderMsg"></span><br />
+        휴대폰* : <input id="phoneNum" type="text" onchange="checkMobile()"><span id="phoneMsg"></span><br />
+        이메일* : <input id="email" type="text" onchange="checkEmail()"><span id="emailMsg"></span><br />
+        패스워드* : <input id="password" type="text" onchange="checkPassword()"><span id="passwordMsg"></span><br />
+        패스워드 확인* : <input id="passwordCheck" type="text" onchange="checkTwoPassword()"><span id="passwordCheckMsg"></span><br />
+        <input type="button" onclick="checkInputValue()" value="완료"><input type="button" onclick="clearText()" value="지우기">
+    </form>
+    <hr>
+    <canvas id="myCanvas" width="300" height="50"></canvas>
+    <hr>
+
+
+    <script>
+        var userName = document.getElementById("userName");
+        var gender = document.getElementsByName("gender");
+        var phoneNum = document.getElementById("phoneNum");
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+        var passwordCheck = document.getElementById("passwordCheck");
+
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(0, 0);
+        context.lineTo(50, 50);
+        context.lineTo(100, 0);
+        context.lineTo(150, 50);
+        context.lineTo(200, 0);
+        context.lineTo(250, 50);
+        context.stroke();
+
+        var img = document.createElement('img');
+        img.src = "https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile8.uf.tistory.com%2Fimage%2F997067455DB3292D0AB4B1";
+        document.body.appendChild(img);
+
+        function changeH5(){
+            var h5 = document.getElementById("h5-target");
+            h5.textContent = "바꿨지롱";
+        }
+
+        function checkNumber(){
+            var regExp = /^[0-9]+$/;
+            var number = document.getElementById("input-ex7").value;
+            var isNumber = regExp.test(number);
+            if(isNumber){
+                alert("숫자 맞음ㅎ");
+            }else{
+                alert("숫자 아님!");
+            }
+        }
+
+        function switchOnOff(){
+            var mySwitch = document.getElementById("img-ex8");
+            if(mySwitch.alt === "on") {
+                mySwitch.src = "http://download.seaicons.com/icons/paomedia/small-n-flat/1024/switch-off-icon.png";
+                mySwitch.alt = "off";
+            }else{
+                mySwitch.src = "http://download.seaicons.com/icons/paomedia/small-n-flat/1024/switch-on-icon.png"
+                mySwitch.alt = "on";
+            }
+        }
+
+        function checkNumeric(elem, msg){
+            var exp = /^[0-9]+$/;
+            if(elem.value.match(exp)){
+                if(elem.value.length < 11){
+                    alert("넘 짧은데,,");
+                    elem.focus();
+                    return false;
+                }
+                return true;
+            }else{
+                alert("숫자 아닌 건 빼주세요 ,,");
+                elem.focus();
+                return false;
+            }
+        }
+
+        function checkSelection(elem){
+            if(elem.value === "0"){
+                alert("하나 선택해주세요 ㅠ^ㅠ");
+                elem.focus();
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        function clearText(){
+            gender.forEach(function(e){
+                e.checked = false;
+            });
+
+            userName.value = "";
+            phoneNum.value = "";
+            email.value = "";
+            password.value = "";
+            passwordCheck.value = "";
+            document.querySelectorAll('span').forEach(function(e){
+                e.textContent = "";
+            });
+        }
+
+        function checkName(){
+            var nameReg = /^[가-힣]+$/; // 한글만(공백x)
+            if(!nameReg.test(userName.value)){
+                document.getElementById("nameMsg").textContent = "한글만 입력해주라";
+            }else{
+                document.getElementById("nameMsg").textContent = "";
+            }
+        }
+        
+        function checkMobile(){
+            var moblieReg = /^\d{3}-\d{3,4}-\d{4}$/; // 숫자 3개  숫자 3-4개 - 숫자 4개
+            if(!moblieReg.test(phoneNum.value)){
+                document.getElementById("phoneMsg").textContent = "하이픈 포함 숫자만 입력해주라";
+            }else{
+                document.getElementById("phoneMsg").textContent = "";
+            }
+        }
+        
+        function checkEmail(){
+            var emailReg = /([a-z0-9_-]+)@([a-z-]+)\.([a-z]{2,3})/; // 영문 또는 숫자 @ 영문 . 영문 2-3개
+            if(!emailReg.test(email.value)){
+                document.getElementById("emailMsg").textContent = "이메일 형식으로 입력해주라";
+            }else{
+                document.getElementById("emailMsg").textContent = "";
+            }
+        }
+
+        function checkPassword(){
+            var passwordReg = /^\w{6,8}$/; // 영문 대소문자 또는 숫자 6-8개
+            if(!passwordReg.test(password.value)){
+                document.getElementById("passwordMsg").textContent = "영문 숫자 6-8자로 입력해주라";
+                return;
+            }else{
+                document.getElementById("passwordMsg").textContent = "";
+            }
+        }
+
+        function checkTwoPassword(){
+            if(password.value !== passwordCheck.value){
+                document.getElementById("passwordCheckMsg").textContent = "비밀번호가 다르다";
+            }else{
+                document.getElementById("passwordCheckMsg").textContent = "";
+            }
+        }
+
+        function checkInputValue(){
+            checkName();
+
+            if(!gender[0].checked && !gender[1].checked){
+                document.getElementById("genderMsg").textContent = "성별 체크해주라";
+            }else{
+                document.getElementById("genderMsg").textContent = "";
+            }
+            
+            checkMobile();
+            checkEmail();
+            checkPassword();
+            checkTwoPassword();   
+        }
+        
+    </script>
+</body>
+</html>
