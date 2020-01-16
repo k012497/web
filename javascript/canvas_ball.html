@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #canvas{
+            display: block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body onload="myCanvas()">
+    <canvas id="canvas" width="300" height="200"></canvas>
+
+    <button onclick="start();">start</button>
+    <button onclick="stop();">stop</button><br />
+    x: <input id = "xValue" type="number">
+    y: <input id = "yValue" type="number">
+    dx: <input id = "dxValue" type="number">
+    dy: <input id = "dyValue" type="number">
+    <script src="canvas_ball.js"></script>
+</body>
+</html>
