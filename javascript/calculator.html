@@ -6,10 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        *{
+            font-size: 18px;
+        }
+        
         .button {
-            width : 25px;
-            height : 15px;
+            width : 30px;
+            height : 30px;
             text-align: center;
+        }
+
+        #display{
+            width: 120px;
+            height: 30px;
+            padding: 0 3px;
+            box-sizing: border-box;
         }
     </style>
 
@@ -18,13 +29,14 @@
     <script>
         var calculator = document.createElement('div');
         var display = document.createElement('input');
+        display.id = "display";
         calculator.style.border = "1px solid black";
         calculator.style.display = "inline-block";
         calculator.style.padding = "10px";
         calculator.appendChild(display);
         
         var expression = "";
-        var buttonArray = [9, 8, 7, 'cl', 6, 5, 4, '+', 3, 2, 1, '-', 0, '*', '-', '='];
+        var buttonArray = [7, 8, 9, 'cl', 4, 5, 6, '+', 1, 2, 3, '-', 0, '*', '/', '='];
         
         function initSetting(){
             calculator.appendChild(document.createElement('form'));
@@ -69,7 +81,7 @@
             }
             expression = eval(expression);
             display.value = expression;
-            expression = "";
+            expression = display.value;
         }
     </script>
     
