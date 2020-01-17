@@ -39,21 +39,23 @@
         var buttonArray = [7, 8, 9, 'cl', 4, 5, 6, '+', 1, 2, 3, '-', 0, '*', '/', '='];
         
         function initSetting(){
-            calculator.appendChild(document.createElement('form'));
+            var form = document.createElement('form');
+            calculator.appendChild(form);
             document.body.appendChild(calculator);
             
-            for(var i = 0 ; i < buttonArray.length ; i++){
+            for(var idx = 0 ; idx < buttonArray.length ; idx++){
                 var button = document.createElement('input');
                 button.type = 'button';
-                button.value = buttonArray[i];
+                button.value = buttonArray[idx];
                 button.classList.add("button");
-                calculator.appendChild(button);
+                form.appendChild(button);
 
-                if((i+1) % 4 === 0){
-                    calculator.appendChild(document.createElement('br'));
+                if((idx + 1) % 4 === 0){
+                    // 각 라인의 4번째 버튼 뒤에 br태그 달기
+                    form.appendChild(document.createElement('br'));
                 }
                 
-                switch(buttonArray[i]){
+                switch(buttonArray[idx]){
                     case 'cl':
                         button.addEventListener('click', clearDisplay);
                         break;
@@ -66,9 +68,9 @@
                             display.value = expression;
                         });
                         break;
-                }
-            }
-        }
+                } // the end of switch
+            } // the end of for
+        } // the end of initSetting
 
         function clearDisplay(){
             expression = "";
