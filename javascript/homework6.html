@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div.out{
+
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="out">
+        <p>마우스를 올려보실래요</p>
+        <p>0</p>
+    </div>
+
+    <hr>
+
+    <div id="target">
+        이것은 <strong>하나의</strong> 단락입니다.
+    </div>
+    <button id="text">text()</button>
+    <button id="html">html()</button>
+
+    <script>
+        var i = 0;
+        $("div.out").mouseover(function () { 
+            $("p:first").text("mouse over");
+            $("p:last").fadeIn("slow").text(++i).fadeOut("slow");
+        });
+
+        $(document).ready(function () {
+            $("#text").click(function (e) { 
+                e.preventDefault();
+                alert($("#target").text());
+            });
+            $("#html").click(function (e) { 
+                e.preventDefault();
+                alert($("#target").html());
+            });
+        });
+    </script>
+</body>
+</html>
