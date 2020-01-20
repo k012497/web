@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div-p484 {
+            width: 60px;
+            height: 60px;
+            background-color: aquamarine;
+        }
+
+        .warning {
+            border: 1px solid black;
+            background-color: yellow;
+        }
+
+        #div-ex3 {
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+            position: relative;
+        }
+
+        #div-ex4 {
+            display: inline-block;
+            background-color: cornflowerblue;
+            padding: 10px;
+            color: wheat;
+        }
+
+        #table-students, #table-students td, #table-students th {
+            border-collapse: collapse;
+            border: 1px solid gray;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #table-students th {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div id="div-p484"></div>
+    <button id="btn1">css(element)</button>
+    <button id="btn2">css(element.style)</button>
+    <p id="result">결과</p>
+
+    <hr>
+
+    <div id="div-p486">example</div>
+    <button id="btnWarning">addClass()</button>
+
+    <hr>
+
+    <h4>students</h4>
+    <p style="border: 1px solid black; padding: 10px;">
+        name : <span id="name"></span>&nbsp;
+        age : <span id="age"></span>
+    </p>
+    
+    <hr>
+
+    <p id="p-ex1">this is p element !</p>
+    <button id="btnHide">hide</button>
+    <button id="btnShow">show</button>
+
+    <hr>
+
+    <input id="userInput" type="text">
+    <span id="userInputValue"></span>
+
+    <hr>
+
+    <button id="btnLeft">◀</button>
+    <button id="btnRight">▶</button>
+    <div id="div-ex3"></div>
+
+    <hr>
+
+    <button id="btnRun">run</button>
+    <div id="div-ex4">HELLO!</div>
+
+    <hr>
+    <table id="table-students">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            // p484 _ css
+            const div1 = $("#div-p484"),
+                result = $("#result");
+                btn1 = $("#btn1")
+                btn2 = $("#btn2");
+
+            btn1.click(function () { 
+                var color = div1.css("background-color"); // get css
+                result.text("background-color: " + color);
+            });
+
+            btn2.click(function () {
+                div1.css("background-color", "red"); // set css
+            });
+
+            // p486 _ addClass
+            const div2 = $("#div-p486"),
+                btnWarning = $("#btnWarning");
+
+            btnWarning.click(function () {
+                div2.addClass("warning");
+            });
+            
+            // p508 _ ex1
+            const btnHide = $("#btnHide"),
+                btnShow = $("#btnShow"),
+                p = $("#p-ex1");
+    
+            btnHide.click(function () {
+                p.hide();
+            });
+
+            btnShow.click(function () {
+                p.show();
+            });
+
+            // p508 _ ex2
+            const userInput = $("#userInput"), userInputValue = $("#userInputValue");
+            userInput.keyup(function () { 
+                userInputValue.text(this.value);
+            });
+
+            // p508 _ ex3
+            const btnLeft = $("#btnLeft"), btnRight = $("#btnRight"), div3 = $("#div-ex3");
+            let move = 1;
+            btnLeft.click(function(){
+                console.log(div3);
+                div3.css("left", move--);
+            });
+            btnRight.click(function(){
+                div3.css("left", move++);
+            });
+
+            // p508 _ ex4
+            const btnRun = $("#btnRun"), div4 = $("#div-ex4");
+            btnRun.click(function (){
+                div4.css({
+                    'color' : 'black',
+                    'border-left' : '3px solid purple',
+                    'border-top' : '3px solid purple',
+                    'background-color' : 'white',
+                });
+            });
+        });
+
+        // p506 _ json_eval
+        const name = document.getElementById("name"),
+            age = document.getElementById("age");
+        let studentArr ='['
+            +'{"name" : "kim", "age" : "21"},'
+            +'{"name" : "park", "age" : "31"},'
+            +'{"name" : "hong", "age" : "41"}'
+        +']';
+
+        let students = JSON.parse(studentArr);
+
+        // span에 정보 뿌리기
+        name.innerHTML = students[0].name;
+        age.innerHTML = students[0].age;
+
+        // table에 정보 뿌리기 
+        const table = document.getElementById("table-students");
+
+        for(let i = 0 ; i < students.length ; i++){
+            let tr = document.createElement('tr'),
+                tdName = document.createElement('td'),
+                tdAge = document.createElement('td');
+
+            tdName.innerHTML = students[i].name;
+            tdAge.innerHTML = students[i].age;
+            tr.appendChild(tdName);
+            tr.appendChild(tdAge);
+
+            table.appendChild(tr);
+        }
+
+        </script>
+</body>
+</html>
