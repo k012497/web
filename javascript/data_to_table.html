@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #table-students, #table-students td, #table-students th {
+            border-collapse: collapse;
+            border: 1px solid gray;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #table-students th {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <table id="table-students">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>직급</th>
+        </tr>
+    </table>
+
+    <script>
+        let response ='['
+            +'{"name" : "kim", "age" : "21", "position" : "팀장"},'
+            +'{"name" : "park", "age" : "31", "position" : "부팀장"},'
+            +'{"name" : "hong", "age" : "41", "position" : "팀원"}'
+        +']';
+
+        // String >> Object >> Array
+        const studentsArr = Object.entries(JSON.parse(response));
+        
+        // 정보 뿌릴 table
+        const table = document.getElementById("table-students");
+
+        studentsArr.forEach(element => {
+            const personArr = Object.entries(element[1]);
+            const tr = document.createElement('tr');
+            for(let idx = 0 ; idx < personArr.length ; idx++){
+                // idx는 몇 번째 멤버 변수인가를 의미. 0: name, 1: age , ... 
+                console.log(personArr[idx], "value"); // e.g. ["name", "kim"]
+                const td = document.createElement('td');
+                td.innerHTML = personArr[idx][1];
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        });
+
+    </script>
+</body>
+</html>
