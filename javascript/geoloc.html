@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    let myDiv = null;
+
+    function getGeoloction() {
+      if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showLocation);
+      }else {
+        alert("geoloction이 지원이 되지 않습니다.");
+      }
+    }
+
+    function showLocation(location){
+      myDiv= document.getElementById("target");
+      myDiv.innerHTML = `위도 : ${location.coords.latitude} , 경도 : ${location.coords.longitude}`;
+    }
+
+    // function showLocation1(location){
+    //   let pos=`${location.coords.latitude}","${location.coords.longitude}`;
+    //   let url="http://maps.googleapis.com/maps/api/staticmap?center="
+    //         + pos + "&zoom=14&size=500x300&sensor=false";
+    //   window.open(url);
+    // }
+
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="getGeoloction()">위치정보 얻기</button>
+  <div id="target">
+  </div>
+</body>
+
+</html>

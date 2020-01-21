@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 20%;
+            padding: 10px;
+            border: 5px solid rgb(145, 88, 35);
+        }
+
+        #button {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .inside-container {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        let count = 0;
+
+        function handleDragStart(e) {  
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text', e.target.id);
+        }
+
+        function allowDrop(e) {
+            console.log("here2");
+            e.preventDefault();
+        }
+
+        function handleDrop(e) {  
+            e.preventDefault();
+            let targetElement = document.getElementById(e.dataTransfer.getData('text'));
+            e.target.appendChild(targetElement);
+            targetElement.classList.add('inside-container');
+        }
+        
+    </script>
+
+</head>
+<body>
+    <div ondragover="allowDrop(event)" ondrop="handleDrop(event)">
+        <div id="container" ondragover="allowDrop(event)" ondrop="handleDrop(event)"></div>
+        <button id="button" ondragstart="handleDragStart(event)" draggable="true">넣어주라</button>
+    </div>
+
+    <hr>
+
+    <h4>svg를 이용한 사각형 만들기</h4>
+    <svg xmls="http://www.w3.org/2000/svg" width="400" height="400" version="1.1">
+        <rect width="400" height="400" style="fill :rgb(145, 88, 35)"></rect>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>p527</title>
+</head>
+<body>
+    <button type="button" onclick="startWorker()">웹 워커 시작!</button>
+    <button type="button" onclick="stopWorker()">웹 워커 종료!</button>
+    <p>현재까지 발견된 가장 큰 소수는
+        <output id="result"></output>
+    </p>
+
+    <script>
+        let worker;
+
+        function startWorker(){
+            let $result = document.getElementById("result");
+            if(typeof Worker !== "undefined"){
+                if(typeof worker === "undefined"){
+                    worker = new Worker("worker.js");
+                }
+                worker.onmessage = function(event){
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            }
+        }
+
+        function stopWorker() {  
+
+        }
+    </script>
+</body>
+</html>
