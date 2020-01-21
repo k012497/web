@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #shopping-cart {
+            width: 580px;
+            /* height: 100px; */
+            padding: 10px;
+            border: 5px solid rgb(145, 88, 35);
+        }
+    </style>
+    <script>
+        let count = 0;
+
+        function handleDragStart(e) {  
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text', e.target.id);
+        }
+
+        function allowDrop(e) {
+            e.preventDefault();
+        }
+
+        function handleDrop(e) {  
+            e.preventDefault();
+            e.target.appendChild(document.getElementById(e.dataTransfer.getData("text")));
+        }
+        
+    </script>
+
+</head>
+<body>
+    <div id="shopping-cart" ondragover="allowDrop(event)" ondrop="handleDrop(event)"></div>
+    <img id="img1" ondragstart="handleDragStart(event)" draggable="true" src="https://i.pinimg.com/originals/ee/6f/e5/ee6fe5d6f58f03a0ef8db3eae8b238a5.png" width="200" alt="">
+    <img id="img2" ondragstart="handleDragStart(event)" draggable="true" src="https://i.dlpng.com/static/png/5376865-hanging-plant-png-stock-by-dlr-coverdesigns-on-deviantart-hanging-plant-png-678_1178_preview.png" width="150" alt="">
+    <img id="img3" ondragstart="handleDragStart(event)" draggable="true" src="https://i.pinimg.com/originals/44/d8/58/44d8586ae81122a171706867dd27ebe5.png" width="200" alt="">
+</body>
+</html>
