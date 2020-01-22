@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>file api</title>
+    <script>
+        function readFile(){
+            let result = document.getElementById("result");
+            // File, FileReader 점검
+            if(!window.File || !window.FileReader){
+                result.value = "File API가 지원되지 않습니다.";
+                return;
+            }
+
+            // File 객체 가져옴
+            let $files = document.getElementById('file_input').files; // 배열
+            
+            // File 객체가 존재하는 지 점검
+            if(!$files.length){
+                alert("please choose file");
+                return;
+            }
+            
+            let fileReader = new FileReader(); // 파일을 읽기 위해 FileReader객체 생성 !
+            fileReader.readAsText($files[0], "utf-8"); // 파일 읽기
+
+            // onload - async
+            fileReader.onload = function(){
+                //handler
+                result.value = fileReader.result;
+                result.value = "파일 읽었지롱";
+            };
+            result.value = "내가 먼저 읽었지롱";
+        }
+    </script>
+</head>
+<body>
+    <!-- multiple: 파일을 여러 개 받을 수 있다! -->
+    <input type="file" id="file_input" multiple="multiple">
+    <button type="button" onclick="readFile()">open file</button><br />
+    <textarea id="result" cols="80" rows="10"></textarea>
+</body>
+</html>
