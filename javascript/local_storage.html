@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>local storage test</title>
+    <script>
+        function pageCount(){
+            if(!localStorage.pageLoadCount){
+                localStorage.pageLoadCount = 0;
+            }
+            localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+            
+            document.getElementById("count").textContent = localStorage.pageLoadCount;
+
+        }
+        
+    </script>
+</head>
+<body onload="pageCount();">
+    <p>you've visited this site <span id="count"></span> times so far!</p>
+</body>
+</html>

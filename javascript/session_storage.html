@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>session storage test</title>
+</head>
+<body>
+    <script>
+        function counter() {  
+            if(('sessionStorage' in window) && window['sessionStorage'] !== null){
+                if(sessionStorage.count){
+                    sessionStorage.count = parseInt(sessionStorage.count) + 1;
+                    console.log(typeof sessionStorage.count, parseInt(sessionStorage.count));
+                }else{
+                    sessionStorage.count = 1;
+                }
+                document.getElementById("target").innerHTML = `${sessionStorage.count}번 클릭!`;
+            }else{
+                document.getElementById("target").innerHTML = `브라우저가 세션스토리지를 지원하지 않습니다..☹️`;
+            }
+        } // end of counter
+    </script>
+    <button onclick="counter();">🖲</button>
+    <div id="target">
+        클릭클릭
+    </div>
+</body>
+</html>
