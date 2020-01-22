@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color: rgba(90, 127, 228, 0.863);
+    animation: 10s colorChange infinite;
+    font-size: 16px;
+}
+
+.warning-msg {
+    margin-left: 10px;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    color: rgb(202, 32, 32);
+}
+
+#sign-in {
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(240, 248, 255, 0.616);
+    position: relative;
+    top : 50%;
+    transform: translateY(50%);
+    
+}
+
+#sign-in #sign-in-form input, #sign-up-form input, #sign-up-form select  {
+    width: 350px;
+    height: 50px;
+    padding: 10px;
+    border: 0;
+    margin-bottom: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+#option, #option a {
+    font-size: 12px;
+    /* color: #333; */
+}
+
+#login-status-chk {
+    float: left;
+    padding: 10px 5px;
+}
+
+#security {
+    float: right;
+    padding: 10px 5px;
+}
+
+#help {
+    border-top: 0.5px solid #eee;
+    padding: 10px 5px;
+    clear: both;
+}
+
+#sign-up {
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(240, 248, 255, 0.616);
+    position: relative;
+    top : 50%;
+
+}
+
+#sign-up-form label {
+    text-align: left;
+    display: block;
+    padding: 5px;
+    font-weight: 900;
+    margin: 0 0 3px 3px;
+}
+
+#sign-up-form #mobile-num, #captcha #cpatchaTextBox{
+    position: relative;
+    float: left;
+    left: 5px;
+    width: 227px;
+}
+
+#sign-up-form #btn-code, #captcha #btnCaptchaChk {
+    position: relative;
+    right: 5px;
+    float: right;
+    width: 118px;
+}
+
+canvas{
+    position: relative;
+    left: 5px;
+    width: 350px;
+    margin: 0 0 5px 0;
+    padding: 10px 0 4px 120px;
+    display: block;
+    background-color: white;
+    text-align: center;
+    /*prevent interaction with the canvas*/
+    pointer-events:none;
+}
+
+#btn-sign-up {
+    margin-top: 40px;
+    background-color: gray;
+    color: antiquewhite;
+}
+
+#sign-in #btn-sign-in {
+    background-color: gray;
+    color: antiquewhite;
+}
+
+input[type=text]:focus {
+    animation: 1s focus linear;
+}
+
+@keyframes focus{
+    0%{background-color: white;}
+    10%{background-color: rgb(236, 173, 173);}
+    100%{background-color: white;}
+}
+
+@keyframes colorChange{
+    0%{background-color: rgb(78, 98, 212);}
+    40%{background-color: rgb(236, 173, 173);}
+    80%{background-color: rgb(248, 227, 180);}
+    100%{background-color: rgb(78, 98, 212);}
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sign_in.js"></script>
+</head>
+<body>
+    <div id="sign-in">
+        <h1>✱<i> logo </i>✱</i></h1>
+        <form id="sign-in-form" action="#">
+            <input type="text" placeholder="ID"><br/>
+            <input type="text" placeholder="PASSWORD"><br/>
+            <input id="btn-sign-in" type="button" value="SIGN IN">
+        </form>
+        <div id="option">
+            <form action="#">
+                <div id="option-top">
+                    <div id="login-status-chk">
+                        <input type="checkbox"> 로그인 상태 유지
+                    </div>
+                    <div id="security">
+                        IP 보안 <a id="ip-security-switch" href="#" onclick="switchIpSecurity();">ON</a> | 
+                        <a href="#">일회용 로그인</a>
+                    </div>
+                </div>
+                <div id="help">
+                    <a href="#">아이디 찾기</a> | 
+                    <a href="#">비밀번호 찾기</a> | 
+                    <a href="sign_up.html">회원가입</a>
+                </div>
+            </form>
+            
+        </div>
+
+    </div>
+</body>
+</html>

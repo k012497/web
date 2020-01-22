@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="sign_up.js"></script>
+
+    <title>SIGN UP</title>
+</head>
+<body onload="init();">
+    <div id="sign-up">
+        <h1>✱<i> welcome! </i>✱</i></h1>
+        <form id="sign-up-form" action="#">
+            <label for="id">id</label>
+            <input id="id" class="required" name="id" type="text" onkeyup="checkId(this.value);" required>
+            <span class="warning-msg" id="idMsg"></span><br />
+    
+            <label for="password">password</label>
+            <input id="password" class="required" name="password" type="text" onkeyup="checkPassword(this.value);" required>
+            <span class="warning-msg" id="password1Msg"></span><br />
+    
+            <label for="password2">check password</label>
+            <input id="password2" class="required" name="passwordCheck" type="text" onkeyup="checkPasswordsSame();" required>
+            <span class="warning-msg" id="password2Msg"></span><br />
+    
+            <label for="name">name</label>
+            <input id="name" class="required" name="name" type="text" onkeyup="checkName(this.value);" required>
+            <span class="warning-msg" id="nameMsg"></span><br />
+    
+            <label for="dob">date of birth</label>
+            <input id="dob" class="required" name="dob" type="date" onblur="checkDateOfBirth(this.value);" required>
+            <span class="warning-msg" id="dobMsg"></span><br />
+    
+            <label for="gender">gender</label>
+            <select name="gender">
+                <option value="female">female</option>
+                <option value="male">male</option>
+             </select>
+    
+            <label for="email">email(option)</label>
+            <input id="email" name="email" type="text" onkeyup="checkEmail();">
+            <span class="warning-msg" id="emailMsg"></span><br />
+    
+            <label for="mobile">mobile</label>
+            <select name="country">
+                <option value="korea">대한민국 +82</option>
+                <option value="greece">그리스 +30</option>
+                <option value="korea">미국 +82</option>
+                <option value="korea">뉴질랜드 +82</option>
+                <option value="korea">스페인 +82</option>
+                <option value="korea">캐나다 +82</option>
+                <option value="korea">호주 +82</option>
+             </select>
+            <input id="mobile-num" class="required" name="mobile" type="text" onkeyup="checkMobile(this.value);" required>
+            <input id="btn-code" type="button" value="인증번호 받기"><br />
+            <input id="code" name="code" type="text"  placeholder="인증번호" required>
+            <span class="warning-msg" id="mobileMsg"></span><br />
+
+            <label for="chptcha">captcha</label>
+            <div id="captcha">
+                <div id="captcha-canv"></div>
+                <input id="cpatchaTextBox" class="required" type="text" placeholder="captcha" required/>
+                <input id="btnCaptchaChk" type="button" value="validate" onclick="validateCaptcha();"/>
+            </div>
+
+            <input id="btn-sign-up" type="button" value="sign up" onclick="submitForm()">
+        </form>
+    </div>
+    
+</body>
+</html>
