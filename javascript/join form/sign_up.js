@@ -97,8 +97,11 @@ function checkDateOfBirth(date){
 
     const inputDate = date.replace(/-/gi, "");
     console.log(inputDate, today);
+    console.log(inputDate > today);
     if(inputDate > today) {
         document.getElementById("dobMsg").textContent = "오늘 날짜 이전으로 설정해주세요";
+    } else {
+        document.getElementById("dobMsg").textContent = "";
     }
     
 }
