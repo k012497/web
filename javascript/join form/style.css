@@ -137,7 +137,7 @@ input[type=text]:focus {
 
 @keyframes focus{
     0%{background-color: white;}
-    10%{background-color: rgb(236, 173, 173);}
+    10%{background-color: rgb(209, 209, 209);}
     100%{background-color: white;}
 }
 

@@ -11,6 +11,7 @@ function submitForm(){
     if(noWarning && validated && noBlank){
         // 빈 칸 없이 모두 올바르게 입력했을 때
         alert("제출 완료");
+        location.href = "sign_in.html";
     }
 }
 
@@ -19,7 +20,7 @@ function checkInputValues(){
     for(let i = 0 ; i < inputArr.length ; i++){
         if(inputArr[i].value === ""){
             inputArr[i].focus();
-            alert("모든 항목을 올바르게 입력해주세요. 1");
+            alert("모든 항목을 올바르게 입력해주세요.");
             return false;
         }
     }
@@ -31,7 +32,7 @@ function checkWarningMsg(){
 
     for(let i = 0 ; i < warningMsgs.length ; i++){
         if(warningMsgs[i].innerHTML !== ""){
-            alert("모든 항목을 올바르게 입력해주세요. 2");
+            alert("모든 항목을 올바르게 입력해주세요.");
             return false;
         }
     }
@@ -86,8 +87,20 @@ function checkName(name){
         document.getElementById('nameMsg').textContent = "공백 제외 한글 2~8자만 가능합니다.";
     }
 }
-function checkDateOfBirth(){
+function checkDateOfBirth(date){
     // 오늘 날짜 이전인지 검사
+    let today = new Date();
+    const year = String(today.getFullYear());
+    const month = today.getMonth()+1 < 10 ? ("0" + String(today.getMonth() + 1)) : String(today.getMonth() + 1);
+    const day = String(today.getDate());
+    today = year + month + day;
+
+    const inputDate = date.replace(/-/gi, "");
+    console.log(inputDate, today);
+    if(inputDate > today) {
+        document.getElementById("dobMsg").textContent = "오늘 날짜 이전으로 설정해주세요";
+    }
+    
 }
 
 function checkEmail(){
